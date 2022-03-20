@@ -1,14 +1,19 @@
+import Image from "next/image";
+
 const SocialsContainer = () => {
   return (
     <div className="flex items-center w-full mt-32">
-       {/* THIS SHULD BE INLINE WITH MY PICT  */}
-      {/* <div className="w-48 h-48 mr-32 rounded-full bg-dusk">
-         <span className="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
-            <img src="https://avatars1.githubusercontent.com/u/1209898?s=460&v=4" alt="Avatar" className="w-full h-full" />
-         </span>
-      </div> */}
+      <div style={{borderRadius: '20px', overflow: 'hidden',display:'flex'}}>
+        <Image
+          src="/ppict.png"
+          alt="profile-picture"
+          layout="intrinsic" 
+          width={128}
+          height={128}
+        />
+      </div>
       <ul className="socials-container">
-        <li>
+        <li className="pt-4">
           <a
             href="https://github.com/dommyrock"
             target="_blank"
@@ -28,7 +33,7 @@ const SocialsContainer = () => {
           </a>
         </li>
 
-        <li>
+        <li className="pt-4">
           <a
             href="https://twitter.com/dompolzer"
             target="_blank"
