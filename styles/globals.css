@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
 html,
 body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial,
     sans-serif;
+  background-color: var(--bg-Dark);
+
 }
-:root{
-  --bg-Dark:#3a3a3b;
+:root {
+  --bg-Dark: #3a3a3b;
 }
+
 #__next {
   margin: 0;
   display: grid;
   grid-template-columns: 40% 60%;
   justify-items: center;
   gap: 2rem;
-  background-color: var(--bg-Dark);
   color: #fff;
-  overflow-x: hidden;
+  /* overflow: hidden; cant have this here because it breaks sticky left column */
 }
-#one{
+#one {
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
   align-self: start;
   padding: 2rem;
   padding-left: 5rem;
+}
+aside > div > h2 {
+  background-color: #151515;
 }
 
 .bg-night {
@@ -140,9 +145,8 @@ body {
   transform: scale(1.1);
 }
 
-
-.intro{
-  line-height:2
+.intro {
+  line-height: 2;
 }
 
 /* Social media container  */
@@ -166,13 +170,30 @@ body {
   border-bottom: solid 2px var(--arcticBlue);
 }
 
+.tracking-wide {
+  letter-spacing: 1px;
+}
+.tracking-widest {
+  letter-spacing: 3px;
+}
+.tracking-wider {
+  letter-spacing: 2px;
+}
 
 /* mobile supposed to be 900 */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   #__next {
     display: block;
   }
-  #one{
+  #one {
     position: inherit;
   }
 }
+/* @media (max-width: 650x) {
+  #two{
+    padding-top:1.5rem ;
+  }
+  #two > div {
+    padding-top:0;
+  }
+} */

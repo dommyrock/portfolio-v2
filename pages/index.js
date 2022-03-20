@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Nav from "../components/Nav";
+import Projects from "../components/Projects";
 import SocialsContainer from "../components/SocialsContainer";
 // import styles from '../styles/Home.module.css'
 
@@ -15,8 +17,8 @@ export default function Home() {
 
         <main>
           <h1 className="text-6xl font-bold">Dominik Polzer</h1>
-          <h2 className="mt-16 sm:text-lg text-[20px] font-semibold leading-tight text-sunrise">
-            Staff Software Engineer at Algolia
+          <h2 className="mt-8 sm:text-lg text-[20px] font-semibold leading-tight text-sunrise">
+             Software Engineer at Five
           </h2>
           <div className="intro">
             <p className="mt-16">
@@ -50,134 +52,12 @@ export default function Home() {
               and in conferences around the world.
             </p>
           </div>
+          <Nav />
         </main>
         <SocialsContainer />
       </div>
       <aside>
-        <div id="two" className="pt-32 pb-40 -my-8 group md:py-0 bg:blue-500">
-          <div className="pt-32 pb-40 -my-8 group md:py-0">
-            <article
-              className="my-8 transition bg-dusk md:group-hover:opacity-50 md:hover:opacity-important md:hover:scale-11/10x"
-              itemScope=""
-              itemType="http://schema.org/CreativeWork"
-            >
-              <a
-                className="block p-40"
-                href="https://github.com/dinerojs/dinero.js"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="text-xs font-bold tracking-widest uppercase text-zenith">
-                  TypeScript
-                </p>
-                <h3
-                  className="mt-8 text-lg font-semibold leading-tight text-zenith"
-                  itemProp="name"
-                >
-                  dinerojs/dinero.js
-                </h3>
-                <p className="mt-8">
-                  Create, calculate, and format money in JavaScript and
-                  TypeScript.
-                </p>
-                <div className="flex items-center mt-16">
-                  <div className="w-16 h-16 p-2 mr-4">
-                    <svg
-                      viewBox="0 0 46.4 46.4"
-                      aria-hidden="true"
-                      className="w-full h-full -mt-px fill-current"
-                    >
-                      <path d="M21.6 2c.3-.6.9-1 1.6-1 .7 0 1.3.4 1.6 1l5.8 11.7c.3.5.8.9 1.4 1l12.8 1.9c.7.1 1.2.6 1.4 1.2.2.6 0 1.4-.5 1.8l-9.3 9.1c-.4.4-.6 1-.5 1.6l2.2 12.9c.1.7-.2 1.4-.7 1.8-.6.4-1.3.5-1.9.1L24 39c-.5-.3-1.1-.3-1.7 0l-11.5 6.1c-.6.3-1.3.3-1.9-.1-.6-.4-.8-1.1-.7-1.8l2.2-12.9c.1-.6-.1-1.2-.5-1.6l-9.4-9c-.5-.5-.7-1.2-.5-1.8.2-.6.8-1.1 1.4-1.2l12.9-1.9c.6-.1 1.1-.5 1.4-1L21.6 2z"></path>
-                    </svg>
-                  </div>
-                  <span className="-mt-px text-xs font-semibold leading-none tracking-wider">
-                    5,414<span className="sr-only">stars</span>
-                  </span>
-                </div>
-              </a>
-            </article>
-            <article
-              className="my-8 transition bg-dusk md:group-hover:opacity-50 md:hover:opacity-important md:hover:scale-11/10x"
-              itemScope=""
-              itemType="http://schema.org/CreativeWork"
-            >
-              <a
-                className="block p-40"
-                href="https://github.com/dinerojs/dinero.js"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="text-xs font-bold tracking-widest uppercase text-zenith">
-                  TypeScript
-                </p>
-                <h3
-                  className="mt-8 text-lg font-semibold leading-tight text-zenith"
-                  itemProp="name"
-                >
-                  dinerojs/dinero.js
-                </h3>
-                <p className="mt-8">
-                  Create, calculate, and format money in JavaScript and
-                  TypeScript.
-                </p>
-                <div className="flex items-center mt-16">
-                  <div className="w-16 h-16 p-2 mr-4">
-                    <svg
-                      viewBox="0 0 46.4 46.4"
-                      aria-hidden="true"
-                      className="w-full h-full -mt-px fill-current"
-                    >
-                      <path d="M21.6 2c.3-.6.9-1 1.6-1 .7 0 1.3.4 1.6 1l5.8 11.7c.3.5.8.9 1.4 1l12.8 1.9c.7.1 1.2.6 1.4 1.2.2.6 0 1.4-.5 1.8l-9.3 9.1c-.4.4-.6 1-.5 1.6l2.2 12.9c.1.7-.2 1.4-.7 1.8-.6.4-1.3.5-1.9.1L24 39c-.5-.3-1.1-.3-1.7 0l-11.5 6.1c-.6.3-1.3.3-1.9-.1-.6-.4-.8-1.1-.7-1.8l2.2-12.9c.1-.6-.1-1.2-.5-1.6l-9.4-9c-.5-.5-.7-1.2-.5-1.8.2-.6.8-1.1 1.4-1.2l12.9-1.9c.6-.1 1.1-.5 1.4-1L21.6 2z"></path>
-                    </svg>
-                  </div>
-                  <span className="-mt-px text-xs font-semibold leading-none tracking-wider">
-                    5,414<span className="sr-only">stars</span>
-                  </span>
-                </div>
-              </a>
-            </article>
-            <article
-              className="my-8 transition bg-dusk md:group-hover:opacity-50 md:hover:opacity-important md:hover:scale-11/10x"
-              itemScope=""
-              itemType="http://schema.org/CreativeWork"
-            >
-              <a
-                className="block p-40"
-                href="https://github.com/dinerojs/dinero.js"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="text-xs font-bold tracking-widest uppercase text-zenith">
-                  TypeScript
-                </p>
-                <h3
-                  className="mt-8 text-lg font-semibold leading-tight text-zenith"
-                  itemProp="name"
-                >
-                  dinerojs/dinero.js
-                </h3>
-                <p className="mt-8">
-                  Create, calculate, and format money in JavaScript and
-                  TypeScript.
-                </p>
-                <div className="flex items-center mt-16">
-                  <div className="w-16 h-16 p-2 mr-4">
-                    <svg
-                      viewBox="0 0 46.4 46.4"
-                      aria-hidden="true"
-                      className="w-full h-full -mt-px fill-current"
-                    >
-                      <path d="M21.6 2c.3-.6.9-1 1.6-1 .7 0 1.3.4 1.6 1l5.8 11.7c.3.5.8.9 1.4 1l12.8 1.9c.7.1 1.2.6 1.4 1.2.2.6 0 1.4-.5 1.8l-9.3 9.1c-.4.4-.6 1-.5 1.6l2.2 12.9c.1.7-.2 1.4-.7 1.8-.6.4-1.3.5-1.9.1L24 39c-.5-.3-1.1-.3-1.7 0l-11.5 6.1c-.6.3-1.3.3-1.9-.1-.6-.4-.8-1.1-.7-1.8l2.2-12.9c.1-.6-.1-1.2-.5-1.6l-9.4-9c-.5-.5-.7-1.2-.5-1.8.2-.6.8-1.1 1.4-1.2l12.9-1.9c.6-.1 1.1-.5 1.4-1L21.6 2z"></path>
-                    </svg>
-                  </div>
-                  <span className="-mt-px text-xs font-semibold leading-none tracking-wider">
-                    5,414<span className="sr-only">stars</span>
-                  </span>
-                </div>
-              </a>
-            </article>
-          </div>
-        </div>
+        <Projects />
       </aside>
     </>
   );
