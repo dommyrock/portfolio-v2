@@ -8,6 +8,15 @@ import SocialsContainer from "../components/SocialsContainer";
 export default function Home() {
   return (
     <>
+      <div className="light x1"></div>
+      <div className="light x2"></div>
+      <div className="light x3"></div>
+      <div className="light x4"></div>
+      <div className="light x5"></div>
+      <div className="light x6"></div>
+      <div className="light x7"></div>
+      <div className="light x8"></div>
+      <div className="light x9"></div>
       <div id="one">
         <Head>
           <title>Dominik Polzer</title>
@@ -18,7 +27,7 @@ export default function Home() {
         <main>
           <h1 className="text-6xl font-bold">Dominik Polzer</h1>
           <h2 className="mt-8 sm:text-lg text-[20px] font-semibold leading-tight text-sunrise">
-             Software Engineer at Five
+            Software Engineer at Five
           </h2>
           <div className="intro">
             <p className="mt-16">
