@@ -3,16 +3,16 @@ import Image from "next/image";
 const SocialsContainer = () => {
   return (
     <div className="flex items-center w-full mt-32">
-      <div style={{borderRadius: '20px', overflow: 'hidden',display:'flex'}}>
+      <div style={{borderRadius: '999px', overflow: 'hidden',display:'flex'}}>
         <Image
           src="/ppict.png"
           alt="profile-picture"
           layout="intrinsic" 
-          width={128}
-          height={128}
+          width={64}
+          height={64}
         />
       </div>
-      <ul className="socials-container">
+      <ul className="socials-container pl-4">
         <li className="pt-4">
           <a
             href="https://github.com/dommyrock"

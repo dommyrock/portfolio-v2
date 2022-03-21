@@ -157,7 +157,6 @@ aside > div > h2 {
 
 /* Social media container  */
 .socials-container {
-  padding: 0px;
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
