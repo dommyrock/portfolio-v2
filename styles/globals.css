@@ -193,6 +193,10 @@ aside > div > h2 {
   #one {
     position: inherit;
   }
+  #projects{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 /* ANIMATED STRIPES BG */
