@@ -1,4 +1,6 @@
-export default function Projects() {
+export default function Projects( {data}) {
+  const JUST_MAPThisIntoUI =data
+  debugger
   return (
     <div
       id="projects"
