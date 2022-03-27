@@ -5,9 +5,10 @@ import Nav from "../components/Nav";
 import Projects from "../components/Projects";
 import SocialsContainer from "../components/SocialsContainer";
 import { google } from "googleapis";
+import Blogs from "../components/Blogs";
 // import styles from '../styles/Home.module.css'
 
-export default function Home({rows}) {
+export default function Home({ projects,posts }) {
   return (
     <>
       <LightStrips />
@@ -25,7 +26,8 @@ export default function Home({rows}) {
         <SocialsContainer />
       </div>
       <aside>
-        <Projects data={rows}/>
+        {projects && <Projects projects={projects} />}
+        {posts && <Blogs posts={posts} />}
       </aside>
     </>
   );
@@ -38,13 +40,19 @@ export async function getStaticProps(context) {
   });
   const sheet = google.sheets({ version: "v4", auth });
   //select from spreadsheet
-  const range = "Sheet1!A1:B1";
+  const range = "Sheet1!A2:E6";
   const res = await sheet.spreadsheets.values.get({
     spreadsheetId: process.env.SHEET_ID,
     range,
   });
+  console.log('fetching spreadsheet data...\n');
+  console.log('query:', range);
+  console.log('status:', res.status);
   const rows = res.data.values;
+  const projects = rows.filter((x) => x[0][0] === "p");
+  const posts = rows.filter((x) => x[0][0] === "b");
+
   return {
-    props: { rows }, // will be passed to the page component as props
+    props: { projects,posts }, // will be passed to the page component as props
   };
 }

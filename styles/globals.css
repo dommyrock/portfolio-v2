@@ -193,9 +193,17 @@ aside > div > h2 {
   #one {
     position: inherit;
   }
-  #projects{
+  #projects,#posts{
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  /* Tame scaling on lower sizes */
+  .md\:hover\:scale-11\/10x:hover {
+    transform: scale(1.05);
+  }
+  .group-2:hover .md\:group-2-hover\:scale-11\/10x {
+    transform: scale(1.05);
   }
 }
 

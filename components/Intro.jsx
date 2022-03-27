@@ -7,34 +7,18 @@ export default function Intro() {
       </h2>
       <div className="intro">
         <p className="mt-16">
-          I build open-source front-end libraries at{" "}
+          I build distributed systems and make performance optimisations for one
+          of the biggest US recruiting platforms at{" "}
           <a
             className="underline text-zenith"
-            href="https://www.algolia.com/"
+            href="https://five.agency/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Algolia
+            Five.
           </a>{" "}
-          and host the{" "}
-          <a
-            className="underline text-zenith"
-            href="https://developerexperience.buzzsprout.com/"
-            rel="noopener noreferrer"
-          >
-            Developer Experience podcast
-          </a>
-          . I cant shut up about test-driven development and utility-first CSS.
-          I also share what I learn on my{" "}
-          <a
-            className="underline text-zenith"
-            href="http://frontstuff.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            blog
-          </a>
-          and in conferences around the world.
+          It also happens that my favourite area of development is curently
+          distributed systems and data processing.
         </p>
       </div>
     </>

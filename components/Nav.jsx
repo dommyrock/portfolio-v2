@@ -1,6 +1,6 @@
 export default function Nav() {
   return (
-   <nav className="hidden text-sm font-bold uppercase text-widest mt-10 md:block">
+   <nav className="hidden text-sm font-bold uppercase text-widest mt-20 md:block">
    <ul className="flex flex-row md:flex-col md:-my-16">
      <li className="md:mt-8">
        <a
@@ -17,12 +17,12 @@ export default function Nav() {
      <li className="md:mt-8">
        <a
          className="inline-flex items-center hover:text-zenith transition group"
-         href="#talks"
+         href="#posts"
        >
          <span className="text-xs tracking-wide">02</span>
          <span className="inline-block w-24 h-px mx-16 -mt-px group-hover:w-48 bg-dawn group-hover:bg-zenith transition"></span>
          <span className="text-xs tracking-widest uppercase">
-           Talks
+           Posts
          </span>
        </a>
      </li>
