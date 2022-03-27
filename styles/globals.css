@@ -41,6 +41,12 @@ aside > div > h2 {
   background-color: #151515;
 }
 
+#cv-section{
+  border: 2px solid #cccccc40;
+  border-radius: 10px;
+  padding-right: 0.2rem;
+  background-color: #7373733d;
+}
 .bg-night {
   --tw-bg-opacity: 1;
   background-color: rgb(21 21 21 / var(--tw-bg-opacity));
