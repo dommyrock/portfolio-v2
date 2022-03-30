@@ -35,8 +35,14 @@ export default function Home({ projects,posts }) {
 //Run inly @Build time to pre render content
 export async function getStaticProps(context) {
   //query googledocs
+  const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY || '{ privateKey: null }')
   const auth = await google.auth.getClient({
     scopes: "https://www.googleapis.com/auth/spreadsheets.readonly",
+    projectId: process.env.GOOGLE_PROJECTID,
+    credentials: {
+      private_key: privateKey,
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    },
   });
   const sheet = google.sheets({ version: "v4", auth });
   //select from spreadsheet
@@ -47,7 +53,7 @@ export async function getStaticProps(context) {
   });
   console.log('fetching spreadsheet data...\n');
   console.log('query:', range);
-  console.log('status:', res.status);
+  console.log('Response > code:', res.status);
   const rows = res.data.values;
   const projects = rows.filter((x) => x[0][0] === "p");
   const posts = rows.filter((x) => x[0][0] === "b");
