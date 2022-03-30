@@ -73,6 +73,10 @@ aside > div > h2 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+#posts >p {
+  font-size: 12px;
+  color: rgba(163, 159, 159, 0.644);
+}
 .text-sunrise {
   --tw-text-opacity: 1;
   color: rgb(245 245 250 / var(--tw-text-opacity));
