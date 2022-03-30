@@ -17,8 +17,7 @@ export default function Intro() {
           >
             Five.
           </a>{" "}
-          It also happens that my favourite area of development is curently
-          distributed systems and data processing.
+          It also happens that my favourite area of development is currently distributed systems and data processing.
         </p>
       </div>
     </>

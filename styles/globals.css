@@ -575,8 +575,8 @@ aside > div > h2 {
 
 .nav_box:hover {
   background: linear-gradient(to right, #8d9fa3 35%, #8b72b1 100%);
-
   cursor: pointer;
+  color: #fff;
 }
 
 .shadow:hover::before {
