@@ -5,10 +5,9 @@ import Nav from "../components/Nav";
 import Projects from "../components/Projects";
 import SocialsContainer from "../components/SocialsContainer";
 import { google } from "googleapis";
-import Blogs from "../components/Blogs";
-// import styles from '../styles/Home.module.css'
+import Posts from "../components/Posts";
 
-export default function Home({ projects,posts }) {
+export default function Home({ projects, posts }) {
   return (
     <>
       <LightStrips />
@@ -27,7 +26,26 @@ export default function Home({ projects,posts }) {
       </div>
       <aside>
         {projects && <Projects projects={projects} />}
-        {posts && <Blogs posts={posts} />}
+        {posts && <Posts posts={posts} />}
+        <p
+          className="text-sm mt-104 ml-104 md:ml-160 opacity-75 pt-12 pb-8"
+          style={{
+            fontSize: "12px",
+            color: "rgba(163, 159, 159, 0.644)",
+            textAlign: "center",
+          }}
+        >
+          Inspired by{" "}
+          <a
+            className="transition text-sunrise hover:text-zenith hover:underline"
+            href="https://www.sarahdayan.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sarah Dayan
+          </a>
+          .
+        </p>
       </aside>
     </>
   );
@@ -35,7 +53,9 @@ export default function Home({ projects,posts }) {
 //Run inly @Build time to pre render content
 export async function getStaticProps(context) {
   //query googledocs
-  const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY || '{ privateKey: null }')
+  const { privateKey } = JSON.parse(
+    process.env.GOOGLE_PRIVATE_KEY || "{ privateKey: null }"
+  );
   const auth = await google.auth.getClient({
     scopes: "https://www.googleapis.com/auth/spreadsheets.readonly",
     projectId: process.env.GOOGLE_PROJECTID,
@@ -51,14 +71,14 @@ export async function getStaticProps(context) {
     spreadsheetId: process.env.SHEET_ID,
     range,
   });
-  console.log('fetching spreadsheet data...\n');
-  console.log('query:', range);
-  console.log('Response > code:', res.status);
+  console.log("fetching spreadsheet data...\n");
+  console.log("query:", range);
+  console.log("Response > code:", res.status);
   const rows = res.data.values;
   const projects = rows.filter((x) => x[0][0] === "p");
   const posts = rows.filter((x) => x[0][0] === "b");
 
   return {
-    props: { projects,posts }, // will be passed to the page component as props
+    props: { projects, posts }, // will be passed to the page component as props
   };
 }

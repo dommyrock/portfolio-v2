@@ -57,18 +57,6 @@ export default function Blogs({ posts }) {
         ))}
         {/* HOVER GROUP ENDS HERE  */}
       </div>
-      <p  className="text-sm mt-104 ml-104 md:ml-160 transition opacity-75 pt-12">
-          Inspired by{" "}
-          <a
-            className="transition text-sunrise hover:text-zenith hover:underline"
-            href="https://www.sarahdayan.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sarah Dayan
-          </a>
-          .
-        </p>
     </div>
   );
 }
