@@ -11,7 +11,7 @@ export default function Nav() {
           <NavBox pfx="02" txt="posts" />
         </li>
         <li className="md:mt-4">
-          <NavBox pfx="03" txt="interests" />
+          <NavBox pfx="03" txt="debugging" />
         </li>
       </ul>
     </nav>

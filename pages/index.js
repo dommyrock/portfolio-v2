@@ -6,6 +6,7 @@ import Projects from "../components/Projects";
 import SocialsContainer from "../components/SocialsContainer";
 import { google } from "googleapis";
 import Posts from "../components/Posts";
+import Credit  from "../components/Credit";
 
 export default function Home({ projects, posts }) {
   return (
@@ -27,25 +28,7 @@ export default function Home({ projects, posts }) {
       <aside>
         {projects && <Projects projects={projects} />}
         {posts && <Posts posts={posts} />}
-        <p
-          className="text-sm mt-104 ml-104 md:ml-160 opacity-75 pt-12 pb-8"
-          style={{
-            fontSize: "12px",
-            color: "rgba(163, 159, 159, 0.644)",
-            textAlign: "center",
-          }}
-        >
-          Inspired by{" "}
-          <a
-            className="transition text-sunrise hover:text-zenith hover:underline"
-            href="https://www.sarahdayan.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sarah Dayan
-          </a>
-          .
-        </p>
+        <Credit/>
       </aside>
     </>
   );
