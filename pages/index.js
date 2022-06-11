@@ -48,14 +48,19 @@ export async function getStaticProps(context) {
     },
   });
   const sheet = google.sheets({ version: "v4", auth });
+  
   //select from spreadsheet
-  const range = "Sheet1!A2:E6";
+  const query = await sheet.spreadsheets.values.get({
+    spreadsheetId: process.env.SHEET_ID,
+    range:"Sheet1!G2",
+  });
   const res = await sheet.spreadsheets.values.get({
     spreadsheetId: process.env.SHEET_ID,
-    range,
+    range:`Sheet1!${query.data.values[0][0]}`,
   });
-  console.log("fetching spreadsheet data...\n");
-  console.log("query:", range);
+
+  console.log("Fetching spreadsheet data...\n");
+  console.log("Query:", query.data.values[0][0]);
   console.log("Response > code:", res.status);
   const rows = res.data.values;
   const projects = rows.filter((x) => x[0][0] === "p");

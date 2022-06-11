@@ -194,7 +194,11 @@ aside > div > h2 {
 .tracking-wider {
   letter-spacing: 2px;
 }
-
+@media (min-width: 1000px) {
+  #posts,#projects{
+    max-width: 650px;
+  }
+}
 /* mobile supposed to be 900 */
 @media (max-width: 1000px) {
   #__next {
@@ -203,7 +207,12 @@ aside > div > h2 {
   #one {
     position: inherit;
   }
-  #projects,#posts{
+  #posts{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+  }
+  #projects{
     margin-left: 1rem;
     margin-right: 1rem;
   }
