@@ -42,10 +42,17 @@ aside > div > h2 {
 }
 
 #cv-section{
-  border: 2px solid #cccccc40;
+  border: 3px solid #a1e8f8;
   border-radius: 10px;
   padding-right: 0.2rem;
   background-color: #7373733d;
+}
+#cv-section >span{
+  color: #a1e8f8;
+  font-weight: bold;
+}
+#cv-section:hover{
+  background: rgba(255, 255, 255, 0.464);
 }
 .bg-night {
   --tw-bg-opacity: 1;
